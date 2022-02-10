@@ -59,9 +59,8 @@ Yes, it will work with the default coupon types.
 
 == Screenshots ==
 1. Go to Wordpress dashboard>woocommerce>coupon
-2. Select coupon type \"Subscription Trial\"
-3. Before applying coupon code
-4. After applying coupon code
+2. Before applying coupon code
+3. After applying coupon code
 
 == Changelog ==
 = 1.0 =
