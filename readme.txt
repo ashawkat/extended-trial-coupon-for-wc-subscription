@@ -13,7 +13,7 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 **"Trial Coupon for WooCommerce Subscriptions"** will add coupon type & option in WooCommerce coupon settings to extend the default trial period of WooCommerce Subscription products
 
 == Description ==
-Extended Trial Coupon for WC Subscription is a plugin forked from [*Free Trial Coupon for Woocommerce Subscriptions*](https://wordpress.org/plugins/woo-subscription-trial-coupon/) plugin as the plugin had no updates from last 2 year thought it will be good to have such plugin with updated codebase. **\"Trial Coupon for WooCommerce Subscriptions\"** will add coupon type & option in WooCommerce coupon settings to extend the default trial period of WooCommerce Subscription products. This plugin will only work if WooCommerce & WooCommerce Subscription is enabled within your website.
+Extended Trial Coupon for WC Subscription is a plugin forked from [*Free Trial Coupon for Woocommerce Subscriptions*](https://wordpress.org/plugins/woo-subscription-trial-coupon/) plugin as the plugin had no updates from last 2 year thought it will be good to have such plugin with updated codebase. **"Trial Coupon for WooCommerce Subscriptions"** will add coupon type & option in WooCommerce coupon settings to extend the default trial period of WooCommerce Subscription products. This plugin will only work if WooCommerce & WooCommerce Subscription is enabled within your website.
 
 ### Required Plugins:
 - [**WooCommerce**](https://wordpress.org/plugins/woocommerce/)
