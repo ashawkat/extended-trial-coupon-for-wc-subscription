@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Extended Trial Coupon for WooCommerce Subscription\n"
+"POT-Creation-Date: 2022-02-08 19:56+0600\n"
+"PO-Revision-Date: 2022-02-08 14:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: Spanish (Spain)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wcs-trial-coupon.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: es_ES\n"
+"X-Loco-Version: 2.5.8; wp-5.9"
+
+#: includes/Admin_Notice.php:13
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/Admin_Notice.php:16
+msgid "WooCommerce Subscription"
+msgstr "Suscripción WooCommerce"
+
+#. translators: 1: Plugin name 2: WC title & installation link 3: WCS title & installation link
+#: includes/Admin_Notice.php:21
+#, php-format
+msgid ""
+"%1$s requires %2$s & %3$s to be installed and activated to function properly."
+msgstr ""
+"%1$s requiere que %2$s & %3$s estén instalados y activados para funcionar "
+"correctamente."
+
+#: includes/Admin_Notice.php:22
+msgid "Trial Coupon for WooCommerce Subscription"
+msgstr "Cupón de prueba para la suscripción de WooCommerce"
+
+#: includes/Trial_Coupon_Actions.php:28
+msgid "Subscription Trial"
+msgstr "Suscripción de prueba"
+
+#: includes/views/coupon-fields.php:3
+msgid "Free trial"
+msgstr "Prueba gratuita"
+
+#: includes/views/coupon-fields.php:6
+msgid "Subscription Trial Period"
+msgstr "Período de prueba de la suscripción"
+
+#: includes/views/coupon-fields.php:13
+msgid ""
+"An optional period of time to wait before charging the first recurring "
+"payment. Any sign up fee will still be charged at the outset of the "
+"subscription"
+msgstr ""
+"Un periodo de tiempo opcional para esperar antes de cobrar el primer pago "
+"recurrente. Cualquier cuota de inscripción se seguirá cobrando al principio "
+"de la suscripción"
+
+#. Plugin Name of the plugin/theme
+msgid "Extended Trial Coupon for WooCommerce Subscription"
+msgstr "Cupón de prueba extendido para la suscripción de WooCommerce"
+
+#. Plugin URI of the plugin/theme
+msgid "https://codeheaven.ca"
+msgstr "https://codeheaven.ca"
+
+#. Description of the plugin/theme
+msgid ""
+"WCS Trial Coupon will add option in WooCommerce coupon filed. With this "
+"plugin you can provide extra amount of time on trial period while purchasing "
+"a subscription from your store."
+msgstr ""
+"WCS Trial Coupon añadirá una opción en el archivo de cupones de WooCommerce. "
+"Con este plugin usted puede proporcionar una cantidad extra de tiempo en el "
+"período de prueba, mientras que la compra de una suscripción de su tienda."
+
+#. Author of the plugin/theme
+msgid "Code Heaven"
+msgstr "Código Cielo"
+
+#. Author URI of the plugin/theme
+msgid "https://codeheaven.ca/"
+msgstr "https://codeheaven.ca/"
