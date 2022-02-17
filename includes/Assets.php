@@ -37,6 +37,10 @@ class Assets {
      */
     public function get_styles() {
         return [
+            'wcs-coupon-admin-style' => [
+                'src'     => WCS_TRIAL_COUPON_ASSETS . '/css/admin.css',
+                'version' => filemtime( WCS_TRIAL_COUPON_PATH . '/assets/css/admin.css' ),
+            ]
         ];
     }
 

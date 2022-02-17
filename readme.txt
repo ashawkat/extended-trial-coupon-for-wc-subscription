@@ -4,7 +4,7 @@ Tags: Woocommerce Subscription trial coupon, Trial Coupon, Free Trial Coupon, Wo
 Requires at least: 5.7
 Tested up to: 5.9
 Requires PHP: 7.3
-Stable tag: 1.0
+Stable tag: 1.1
 WC requires at least: 5.0
 WC tested up to: 6.1.1
 License: GPLv2
@@ -58,14 +58,20 @@ No, it doesn't work without Woo Subscription plugin.
 Yes, it will work with the default coupon types.
 
 == Screenshots ==
-1. Go to Wordpress dashboard>woocommerce>coupon
+1. Go to WordPress dashboard>woocommerce>coupon
 2. Before applying coupon code
 3. After applying coupon code
 
 == Changelog ==
+= 1.1 =
+Added: review class added for showing a prompt to provide review if you like us.
+
 = 1.0 =
 Initial release
 
 == Upgrade Notice ==
+= 1.1 =
+Just install/update the plugin & enjoy the features
+
 = 1.0 =
 Just install the plugin & enjoy the features
