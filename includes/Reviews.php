@@ -54,8 +54,8 @@ class Reviews {
 
             printf( __( '<div class="notice wcs-review-notice wcs-review-notice--extended">
                 <div class="wcs-review-notice__content">
-                    <h3>Enjoying Happy Addons?</h3>
-                    <p>Thank you for choosing Happy Addons. If you have found our plugin useful and makes you smile, please consider giving us a 5-star rating on WordPress.org. It would mean the world to us.</p>
+                    <h3>Enjoying Extended Trial Coupon for WC Subscription?</h3>
+                    <p>Thank you for choosing Extended Trial Coupon for WC Subscription. If you have found our plugin useful and makes you smile, please consider giving us a 5-star rating on WordPress.org. It would mean the world to us.</p>
                     <div class="wcs-review-notice__actions">
                         <a href="%s" class="wcs-review-button wcs-review-button--cta" target="_blank"><span>👍 Yes, You Deserve It!</span></a>
                         <a href="%s" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>🙌 Already Rated!</span></a>
