@@ -3,7 +3,7 @@
  * Plugin Name: Extended Trial Coupon for WC Subscription
  * Plugin URI: https://codeheaven.ca
  * Description: WCS Trial Coupon will add option in WooCommerce coupon filed. With this plugin you can provide extra amount of time on trial period while purchasing a subscription from your store.
- * Version: 1.1
+ * Version: 1.2
  * Author: Code Heaven
  * Author URI: https://codeheaven.ca/
  * License: GPLv2
@@ -28,7 +28,7 @@ final class WCS_Trial_Coupon {
      *
      * $var string
      */
-    const version = '1.1';
+    const version = '1.2';
 
     /*
      * Plugin constructor

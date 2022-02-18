@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Extended Trial Coupon for WooCommerce Subscription\n"
 "POT-Creation-Date: 2022-02-08 19:56+0600\n"
-"PO-Revision-Date: 2022-02-08 14:03+0000\n"
+"PO-Revision-Date: 2022-02-18 14:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: Spanish (Spain)\n"
 "MIME-Version: 1.0\n"
@@ -24,14 +24,6 @@ msgstr ""
 "Language: es_ES\n"
 "X-Loco-Version: 2.5.8; wp-5.9"
 
-#: includes/Admin_Notice.php:13
-msgid "WooCommerce"
-msgstr "WooCommerce"
-
-#: includes/Admin_Notice.php:16
-msgid "WooCommerce Subscription"
-msgstr "Suscripción WooCommerce"
-
 #. translators: 1: Plugin name 2: WC title & installation link 3: WCS title & installation link
 #: includes/Admin_Notice.php:21
 #, php-format
@@ -40,22 +32,6 @@ msgid ""
 msgstr ""
 "%1$s requiere que %2$s & %3$s estén instalados y activados para funcionar "
 "correctamente."
-
-#: includes/Admin_Notice.php:22
-msgid "Trial Coupon for WooCommerce Subscription"
-msgstr "Cupón de prueba para la suscripción de WooCommerce"
-
-#: includes/Trial_Coupon_Actions.php:28
-msgid "Subscription Trial"
-msgstr "Suscripción de prueba"
-
-#: includes/views/coupon-fields.php:3
-msgid "Free trial"
-msgstr "Prueba gratuita"
-
-#: includes/views/coupon-fields.php:6
-msgid "Subscription Trial Period"
-msgstr "Período de prueba de la suscripción"
 
 #: includes/views/coupon-fields.php:13
 msgid ""
@@ -67,13 +43,53 @@ msgstr ""
 "recurrente. Cualquier cuota de inscripción se seguirá cobrando al principio "
 "de la suscripción"
 
+#. Author of the plugin/theme
+msgid "Code Heaven"
+msgstr "Código Cielo"
+
+#: includes/Reviews.php:54
+msgid "Enjoying Extended Trial Coupon for WC Subscription?"
+msgstr "¿Disfrutando del cupón de prueba ampliado para la suscripción a WC?"
+
 #. Plugin Name of the plugin/theme
-msgid "Extended Trial Coupon for WooCommerce Subscription"
+#| msgid "Extended Trial Coupon for WooCommerce Subscription"
+msgid "Extended Trial Coupon for WC Subscription"
 msgstr "Cupón de prueba extendido para la suscripción de WooCommerce"
+
+#: includes/views/coupon-fields.php:3
+msgid "Free trial"
+msgstr "Prueba gratuita"
 
 #. Plugin URI of the plugin/theme
 msgid "https://codeheaven.ca"
 msgstr "https://codeheaven.ca"
+
+#. Author URI of the plugin/theme
+msgid "https://codeheaven.ca/"
+msgstr "https://codeheaven.ca/"
+
+#: includes/Trial_Coupon_Actions.php:28
+msgid "Subscription Trial"
+msgstr "Suscripción de prueba"
+
+#: includes/views/coupon-fields.php:6
+msgid "Subscription Trial Period"
+msgstr "Período de prueba de la suscripción"
+
+#: includes/Reviews.php:55
+msgid ""
+"Thank you for choosing Extended Trial Coupon for WC Subscription. If you "
+"have found our plugin useful and makes you smile, please consider giving us "
+"a 5-star rating on WordPress.org. It would mean the world to us."
+msgstr ""
+"Gracias por elegir el cupón de prueba ampliado para la suscripción a WC. Si "
+"ha encontrado nuestro plugin útil y le hace sonreír, por favor considere "
+"darnos una calificación de 5 estrellas en WordPress.org. Significaría el "
+"mundo para nosotros."
+
+#: includes/Admin_Notice.php:22
+msgid "Trial Coupon for WooCommerce Subscription"
+msgstr "Cupón de prueba para la suscripción de WooCommerce"
 
 #. Description of the plugin/theme
 msgid ""
@@ -85,10 +101,26 @@ msgstr ""
 "Con este plugin usted puede proporcionar una cantidad extra de tiempo en el "
 "período de prueba, mientras que la compra de una suscripción de su tienda."
 
-#. Author of the plugin/theme
-msgid "Code Heaven"
-msgstr "Código Cielo"
+#: includes/Admin_Notice.php:13
+msgid "WooCommerce"
+msgstr "WooCommerce"
 
-#. Author URI of the plugin/theme
-msgid "https://codeheaven.ca/"
-msgstr "https://codeheaven.ca/"
+#: includes/Admin_Notice.php:16
+msgid "WooCommerce Subscription"
+msgstr "Suscripción WooCommerce"
+
+#: includes/Reviews.php:56
+msgid "👍 Yes, You Deserve It!"
+msgstr "👍 ¡Sí, te lo mereces!"
+
+#: includes/Reviews.php:59
+msgid "💔 No Thanks"
+msgstr "💔 No gracias"
+
+#: includes/Reviews.php:58
+msgid "🔔 Remind Me Later"
+msgstr "🔔 Recuérdamelo más tarde"
+
+#: includes/Reviews.php:57
+msgid "🙌 Already Rated!"
+msgstr "🙌 ¡Ya está clasificado!"

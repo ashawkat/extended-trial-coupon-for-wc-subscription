@@ -21,10 +21,10 @@ class Reviews {
         }
 
         $install_date = get_option( 'wcs_trial_coupon_installed', strtotime("now") );
-        $past_date    = strtotime( '-10 days' );
+        $past_date    = strtotime( '0 days' );
 
         $remind_time = get_option( 'wcs_remind_me', strtotime( "now" ) );
-        $remind_due  = strtotime( '+15 days', $remind_time );
+        $remind_due  = strtotime( '0 days', $remind_time );
         $now         = strtotime( "now" );
 
         if ( $now >= $remind_due ) {
@@ -51,19 +51,26 @@ class Reviews {
             $remind_me    = esc_url( add_query_arg( 'remind_me', '1', self::wcs_current_admin_url() ) );
             $rated        = esc_url( add_query_arg( 'wcs_rated', '1', self::wcs_current_admin_url() ) );
             $reviewurl    = esc_url( 'https://wordpress.org/support/plugin/extended-trial-coupon-for-wc-subscription/reviews/?rate=5#new-post' );
+            $title        = __( 'Enjoying Extended Trial Coupon for WC Subscription?', 'wcs-trial-coupon' );
+            $subtitle     = __( 'Thank you for choosing Extended Trial Coupon for WC Subscription. If you have found our plugin useful and makes you smile, please consider giving us a 5-star rating on WordPress.org. It would mean the world to us.', 'wcs-trial-coupon' );
+            $cta1         = __( '👍 Yes, You Deserve It!', 'wcs-trial-coupon' );
+            $cta2         = __( '🙌 Already Rated!', 'wcs-trial-coupon' );
+            $cta3         = __( '🔔 Remind Me Later', 'wcs-trial-coupon' );
+            $cta4         = __( '💔 No Thanks', 'wcs-trial-coupon' );
 
-            printf( __( '<div class="notice wcs-review-notice wcs-review-notice--extended">
+            $notice = sprintf( '<div class="notice wcs-review-notice wcs-review-notice--extended">
                 <div class="wcs-review-notice__content">
-                    <h3>Enjoying Extended Trial Coupon for WC Subscription?</h3>
-                    <p>Thank you for choosing Extended Trial Coupon for WC Subscription. If you have found our plugin useful and makes you smile, please consider giving us a 5-star rating on WordPress.org. It would mean the world to us.</p>
+                    <h3>%s</h3>
+                    <p>%s</p>
                     <div class="wcs-review-notice__actions">
-                        <a href="%s" class="wcs-review-button wcs-review-button--cta" target="_blank"><span>👍 Yes, You Deserve It!</span></a>
-                        <a href="%s" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>🙌 Already Rated!</span></a>
-                        <a href="%s" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>🔔 Remind Me Later</span></a>
-                        <a href="%s" class="wcs-review-button wcs-review-button--cta wcs-review-button--error wcs-review-button--outline"><span>💔 No Thanks</span></a>
+                        <a href="%s" class="wcs-review-button wcs-review-button--cta" target="_blank"><span>%s</span></a>
+                        <a href="%s" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>%s</span></a>
+                        <a href="%s" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>%s</span></a>
+                        <a href="%s" class="wcs-review-button wcs-review-button--cta wcs-review-button--error wcs-review-button--outline"><span>%s</span></a>
                     </div>
                 </div>
-            </div>' ), $reviewurl, $rated, $remind_me, $dont_disturb );
+            </div>', $title, $subtitle, $reviewurl, $cta1, $rated, $cta2, $remind_me, $cta3, $dont_disturb, $cta4 );
+            echo $notice;
         }
     }
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Extended Trial Coupon for WooCommerce Subscription\n"
 "POT-Creation-Date: 2022-02-08 19:56+0600\n"
-"PO-Revision-Date: 2022-02-08 14:03+0000\n"
+"PO-Revision-Date: 2022-02-18 14:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -24,14 +24,6 @@ msgstr ""
 "Language: de_DE\n"
 "X-Loco-Version: 2.5.8; wp-5.9"
 
-#: includes/Admin_Notice.php:13
-msgid "WooCommerce"
-msgstr "WooCommerce"
-
-#: includes/Admin_Notice.php:16
-msgid "WooCommerce Subscription"
-msgstr "WooCommerce Abonnement"
-
 #. translators: 1: Plugin name 2: WC title & installation link 3: WCS title & installation link
 #: includes/Admin_Notice.php:21
 #, php-format
@@ -40,22 +32,6 @@ msgid ""
 msgstr ""
 "%1$s erfordert, dass %2$s & %3$s installiert und aktiviert sind, um richtig "
 "zu funktionieren."
-
-#: includes/Admin_Notice.php:22
-msgid "Trial Coupon for WooCommerce Subscription"
-msgstr "Test-Coupon für WooCommerce-Abonnement"
-
-#: includes/Trial_Coupon_Actions.php:28
-msgid "Subscription Trial"
-msgstr "Abo-Testversion"
-
-#: includes/views/coupon-fields.php:3
-msgid "Free trial"
-msgstr "Kostenlose Probe"
-
-#: includes/views/coupon-fields.php:6
-msgid "Subscription Trial Period"
-msgstr "Probezeit für das Abonnement"
 
 #: includes/views/coupon-fields.php:13
 msgid ""
@@ -67,13 +43,53 @@ msgstr ""
 "wiederkehrende Zahlung berechnet wird. Eine eventuelle Anmeldegebühr wird "
 "trotzdem zu Beginn des Abonnements berechnet"
 
+#. Author of the plugin/theme
+msgid "Code Heaven"
+msgstr "Code Himmel"
+
+#: includes/Reviews.php:54
+msgid "Enjoying Extended Trial Coupon for WC Subscription?"
+msgstr "Genießt du den Extended Trial Coupon für das WC-Abo?"
+
 #. Plugin Name of the plugin/theme
-msgid "Extended Trial Coupon for WooCommerce Subscription"
+#| msgid "Extended Trial Coupon for WooCommerce Subscription"
+msgid "Extended Trial Coupon for WC Subscription"
 msgstr "Erweiterter Testgutschein für WooCommerce-Abonnement"
+
+#: includes/views/coupon-fields.php:3
+msgid "Free trial"
+msgstr "Kostenlose Probe"
 
 #. Plugin URI of the plugin/theme
 msgid "https://codeheaven.ca"
 msgstr "https://codeheaven.ca"
+
+#. Author URI of the plugin/theme
+msgid "https://codeheaven.ca/"
+msgstr "https://codeheaven.ca/"
+
+#: includes/Trial_Coupon_Actions.php:28
+msgid "Subscription Trial"
+msgstr "Abo-Testversion"
+
+#: includes/views/coupon-fields.php:6
+msgid "Subscription Trial Period"
+msgstr "Probezeit für das Abonnement"
+
+#: includes/Reviews.php:55
+msgid ""
+"Thank you for choosing Extended Trial Coupon for WC Subscription. If you "
+"have found our plugin useful and makes you smile, please consider giving us "
+"a 5-star rating on WordPress.org. It would mean the world to us."
+msgstr ""
+"Vielen Dank, dass du dich für den Extended Trial Coupon für WC Subscription "
+"entschieden hast. Wenn du unser Plugin als nützlich empfunden hast und es "
+"dich zum Lächeln bringt, dann gib uns bitte eine 5-Sterne-Bewertung auf "
+"WordPress.org. Das würde uns die Welt bedeuten."
+
+#: includes/Admin_Notice.php:22
+msgid "Trial Coupon for WooCommerce Subscription"
+msgstr "Test-Coupon für WooCommerce-Abonnement"
 
 #. Description of the plugin/theme
 msgid ""
@@ -85,10 +101,26 @@ msgstr ""
 "diesem Plugin kannst du beim Kauf eines Abonnements in deinem Shop eine "
 "zusätzliche Zeitspanne für die Probezeit anbieten."
 
-#. Author of the plugin/theme
-msgid "Code Heaven"
-msgstr "Code Himmel"
+#: includes/Admin_Notice.php:13
+msgid "WooCommerce"
+msgstr "WooCommerce"
 
-#. Author URI of the plugin/theme
-msgid "https://codeheaven.ca/"
-msgstr "https://codeheaven.ca/"
+#: includes/Admin_Notice.php:16
+msgid "WooCommerce Subscription"
+msgstr "WooCommerce Abonnement"
+
+#: includes/Reviews.php:56
+msgid "👍 Yes, You Deserve It!"
+msgstr "👍 Ja, du verdienst es!"
+
+#: includes/Reviews.php:59
+msgid "💔 No Thanks"
+msgstr "💔 Nein danke"
+
+#: includes/Reviews.php:58
+msgid "🔔 Remind Me Later"
+msgstr "🔔 Erinnere mich später"
+
+#: includes/Reviews.php:57
+msgid "🙌 Already Rated!"
+msgstr "🙌 Bereits bewertet!"
