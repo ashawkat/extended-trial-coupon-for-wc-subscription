@@ -46,6 +46,9 @@ No, it doesn't work without Woo Subscription plugin.
 Yes, it will work with the default coupon types.
 
 ### Changelog
+= 1.3 =\
+Fixed: Review prompt issue fixed
+
 = 1.2 =\
 Fixed: Minor issues with notice in admin panel fixed.
 

@@ -21,10 +21,10 @@ class Reviews {
         }
 
         $install_date = get_option( 'wcs_trial_coupon_installed', strtotime("now") );
-        $past_date    = strtotime( '0 days' );
+        $past_date    = strtotime( '-10 days' );
 
         $remind_time = get_option( 'wcs_remind_me', strtotime( "now" ) );
-        $remind_due  = strtotime( '0 days', $remind_time );
+        $remind_due  = strtotime( '+15 days', $remind_time );
         $now         = strtotime( "now" );
 
         if ( $now >= $remind_due ) {
