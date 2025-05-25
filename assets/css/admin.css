@@ -1,0 +1,8 @@
+.notice.wcs-review-notice.wcs-review-notice--extended {
+    padding: 0 15px 15px;
+}
+
+.notice.wcs-review-notice.wcs-review-notice--extended a {
+    margin-right: 15px;
+    text-decoration: none;
+}

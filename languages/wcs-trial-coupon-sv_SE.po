@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Extended Trial Coupon for WooCommerce Subscription\n"
+"POT-Creation-Date: 2022-02-08 19:56+0600\n"
+"PO-Revision-Date: 2022-02-18 14:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: Swedish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wcs-trial-coupon.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: sv_SE\n"
+"X-Loco-Version: 2.5.8; wp-5.9"
+
+#. translators: 1: Plugin name 2: WC title & installation link 3: WCS title & installation link
+#: includes/Admin_Notice.php:21
+#, php-format
+msgid ""
+"%1$s requires %2$s & %3$s to be installed and activated to function properly."
+msgstr ""
+"%1$s kräver att %2$s & %3$s är installerade och aktiverade för att fungera "
+"korrekt."
+
+#: includes/views/coupon-fields.php:13
+msgid ""
+"An optional period of time to wait before charging the first recurring "
+"payment. Any sign up fee will still be charged at the outset of the "
+"subscription"
+msgstr ""
+"En valfri tidsperiod som ska vänta innan den första återkommande betalningen "
+"debiteras. Eventuell anmälningsavgift kommer fortfarande att debiteras i "
+"början av prenumerationen"
+
+#. Author of the plugin/theme
+msgid "Code Heaven"
+msgstr "Kod Heaven"
+
+#: includes/Reviews.php:54
+msgid "Enjoying Extended Trial Coupon for WC Subscription?"
+msgstr "Njuter du av en förlängd provkupong för WC-prenumeration?"
+
+#. Plugin Name of the plugin/theme
+#| msgid "Extended Trial Coupon for WooCommerce Subscription"
+msgid "Extended Trial Coupon for WC Subscription"
+msgstr "Kupong för förlängd provperiod för WooCommerce Subscription"
+
+#: includes/views/coupon-fields.php:3
+msgid "Free trial"
+msgstr "Gratis provperiod"
+
+#. Plugin URI of the plugin/theme
+msgid "https://codeheaven.ca"
+msgstr "https://codeheaven.ca"
+
+#. Author URI of the plugin/theme
+msgid "https://codeheaven.ca/"
+msgstr "https://codeheaven.ca/"
+
+#: includes/Trial_Coupon_Actions.php:28
+msgid "Subscription Trial"
+msgstr "Prövning av prenumeration"
+
+#: includes/views/coupon-fields.php:6
+msgid "Subscription Trial Period"
+msgstr "Prövotid för abonnemanget"
+
+#: includes/Reviews.php:55
+msgid ""
+"Thank you for choosing Extended Trial Coupon for WC Subscription. If you "
+"have found our plugin useful and makes you smile, please consider giving us "
+"a 5-star rating on WordPress.org. It would mean the world to us."
+msgstr ""
+"Tack för att du valde Extended Trial Coupon för WC Subscription. Om du har "
+"funnit vårt plugin användbart och får dig att le, var snäll och ge oss ett 5-"
+"stjärnigt betyg på WordPress.org. Det skulle betyda mycket för oss."
+
+#: includes/Admin_Notice.php:22
+msgid "Trial Coupon for WooCommerce Subscription"
+msgstr "Prövningskupong för WooCommerce Subscription"
+
+#. Description of the plugin/theme
+msgid ""
+"WCS Trial Coupon will add option in WooCommerce coupon filed. With this "
+"plugin you can provide extra amount of time on trial period while purchasing "
+"a subscription from your store."
+msgstr ""
+"WCS Trial Coupon kommer att lägga till ett alternativ i WooCommerce "
+"kupongfilen. Med det här insticksprogrammet kan du ge extra tid för "
+"provperiod när du köper en prenumeration i din butik."
+
+#: includes/Admin_Notice.php:13
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/Admin_Notice.php:16
+msgid "WooCommerce Subscription"
+msgstr "WooCommerce prenumeration"
+
+#: includes/Reviews.php:56
+msgid "👍 Yes, You Deserve It!"
+msgstr "👍 Ja, du förtjänar det!"
+
+#: includes/Reviews.php:59
+msgid "💔 No Thanks"
+msgstr "💔 Nej tack"
+
+#: includes/Reviews.php:58
+msgid "🔔 Remind Me Later"
+msgstr "🔔 Påminn mig senare"
+
+#: includes/Reviews.php:57
+msgid "🙌 Already Rated!"
+msgstr "🙌 Redan betygsatt!"
