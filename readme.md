@@ -1,59 +1,105 @@
-**"Trial Coupon for WooCommerce Subscriptions"** will add coupon type & option in WooCommerce coupon settings to extend the default trial period of WooCommerce Subscription products
+# Extended Trial Coupon for WooCommerce Subscriptions
 
-### Description
-Extended Trial Coupon for WC Subscription is a plugin forked from [*Free Trial Coupon for Woocommerce Subscriptions*](https://wordpress.org/plugins/woo-subscription-trial-coupon/) plugin as the plugin had no updates from the last two year thought it will be good to have such plugin with the updated codebase. **"Trial Coupon for WooCommerce Subscriptions"** will add coupon type & option in WooCommerce coupon settings to extend the default trial period of WooCommerce Subscription products. This plugin will only work if WooCommerce & WooCommerce Subscription is enabled within your website.
+Extend and customize the trial period of WooCommerce Subscription products using a dedicated coupon type. Ideal for promotions, marketing campaigns, and providing extended trial access without altering subscription product settings.
 
-### Required Plugins:
-- [**WooCommerce**](https://wordpress.org/plugins/woocommerce/)
-- [**WooCommerce Subscriptions**](https://woocommerce.com/products/woocommerce-subscriptions/)
+---
 
-### Features:
-- Add a new coupon type, "Subscription Trial"
-- Work with WooCommerce Subscriptions products
-- Work with coupon type Sign Up Fee Discount
-- Work with coupon type Sign Up Fee % Discount
-- Work with coupon type Recurring Product Discount
-- Work with coupon type Recurring Product % Discount
+## 🚀 Features
 
-### Translation available:
-- Swedish
-- Spanish (Spain)
-- German
-- Dutch
-- French (France)
+- Adds a new coupon type: **Subscription Trial**
+- Extends trial duration for WooCommerce Subscription products
+- Supports:
+  - Sign Up Fee Discount
+  - Sign Up Fee % Discount
+  - Recurring Product Discount
+  - Recurring Product % Discount
+- Fully compatible with **WooCommerce HPOS (High-Performance Order Storage)**
+- Translation files included:
+  - Swedish  
+  - Spanish (Spain)
+  - German  
+  - Dutch  
+  - French (France)
+- Modern, maintained fork of a previously outdated plugin
 
-### Installation
-#### Through Dashboard
-1. Log in to your WordPress admin panel and go to Plugins -> Add New
-2. Type **Extended Trial Coupon for WC Subscription** in the search box and click the search button.
-3. Find the 'Extended Trial Coupon for WC Subscription' plugin.
-4. Then click on **Install Now** after that, activate the plugin.
-5. Go to WooCommerce Coupon settings & do your magic there.
+---
 
-#### Installing Via FTP
-1. Download the plugin to your hard disk.
-2. Unzip.
-3. Upload the \"wcs-trial-coupon\" folder into your plugins directory.
-4. Log in to your WordPress admin panel and click the Plugins menu.
-5. Then, activate the plugin.
+## 🛠 Requirements
 
-### Frequently Asked Questions
-#### Does it work without WooCommerce plugin?
-No, it doesn't work without WooCommerce plugin.
-#### Does it work without WooCommerce Subscription plugin?
-No, it doesn't work without Woo Subscription plugin.
-#### Does it work with WooCommerce Subscription coupon types?
-Yes, it will work with the default coupon types.
+- **WordPress** 5.7+  
+- **PHP** 8.0+  
+- **WooCommerce** 8.0+  
+- **WooCommerce Subscriptions** plugin  
 
-### Changelog
-= 1.3 =\
-Fixed: Review prompt issue fixed
+---
 
-= 1.2 =\
-Fixed: Minor issues with notice in admin panel fixed.
+## 📦 Installation
 
-= 1.1 =\
-Added: review class added for showing a prompt to provide review if you like us.
+### **Install via WordPress Admin**
+1. Go to **Plugins → Add New**
+2. Search for: **Extended Trial Coupon for WC Subscription**
+3. Click **Install Now** and then **Activate**
+4. Go to **WooCommerce → Coupons** to create a trial coupon
 
-== 1.0 ==\
-Initial release
+### **Install via FTP**
+1. Download the plugin ZIP  
+2. Extract files  
+3. Upload the `wcs-trial-coupon` folder to `/wp-content/plugins/`  
+4. Activate the plugin  
+
+---
+
+## ❓ FAQ
+
+### Does it work without WooCommerce?
+No. WooCommerce is required.
+
+### Does it work without WooCommerce Subscriptions?
+No. Subscription extension requires WooCommerce Subscriptions.
+
+### Does it support other subscription coupon types?
+Yes. It integrates with all default WooCommerce Subscriptions coupon features.
+
+---
+
+## 🖼 Screenshots
+
+1. WooCommerce → Coupons screen  
+2. Before applying trial coupon  
+3. After applying trial coupon  
+
+---
+
+## 📜 Changelog
+
+### **1.5**
+- Updated: Compatibility with WooCommerce **10.3.5**
+- Added: **WooCommerce HPOS (High-Performance Order Storage) support**
+
+### **1.4**
+- Updated compatibility with WooCommerce **8.8**
+
+### **1.3**
+- Fixed review prompt display issue
+
+### **1.2**
+- Fixed minor admin notice warnings
+
+### **1.1**
+- Added review request functionality
+
+### **1.0**
+- Initial release
+
+---
+
+## 👨‍💻 Contributors
+
+- **betatech**  
+- **adnanshawkat**
+
+---
+
+## ⚖ License
+
+GPLv2 — see https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html

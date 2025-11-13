@@ -1,16 +1,22 @@
 {
-    "name": "codeheaven/wcs-trial-coupon",
+    "name": "betatech/wcs-trial-coupon",
     "description": "WCS Trial Coupon will add option in WooCommerce coupon filed. With this plugin you can provide extra amount of time period while purchasing a subscription from your store.",
     "type": "wordpress-plugin",
     "license": "GPLv2",
     "authors": [
         {
-            "name": "Code Heaven",
-            "email": "info@codeheaven.ca"
+          "name": "Betatech",
+          "email": "support@betatech.co"
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "appsero/client": "^2.0"
+    },
+    "require-dev": {
+        "php-stubs/wordpress-stubs": "^6.8",
+        "php-stubs/woocommerce-stubs": "^8.8"
+    },
     "autoload": {
         "psr-4": {
             "WCS\\Trial\\Coupon\\": "includes/"

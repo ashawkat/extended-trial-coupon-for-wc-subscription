@@ -11,6 +11,10 @@ class ComposerStaticInita1478f1cbc485ecc7932b5a4bb540ad4
         array (
             'WCS\\Trial\\Coupon\\' => 17,
         ),
+        'A' => 
+        array (
+            'Appsero\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -18,6 +22,14 @@ class ComposerStaticInita1478f1cbc485ecc7932b5a4bb540ad4
         array (
             0 => __DIR__ . '/../..' . '/includes',
         ),
+        'Appsero\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/appsero/client/src',
+        ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -25,6 +37,7 @@ class ComposerStaticInita1478f1cbc485ecc7932b5a4bb540ad4
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita1478f1cbc485ecc7932b5a4bb540ad4::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita1478f1cbc485ecc7932b5a4bb540ad4::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInita1478f1cbc485ecc7932b5a4bb540ad4::$classMap;
 
         }, null, ClassLoader::class);
     }

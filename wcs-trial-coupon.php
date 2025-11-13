@@ -1,17 +1,17 @@
 <?php
 /*
  * Plugin Name: Extended Trial Coupon for WC Subscription
- * Plugin URI: https://codeheaven.ca
+ * Plugin URI: https://wordpress.org/plugins/extended-trial-coupon-for-wc-subscription/
  * Description: WCS Trial Coupon will add option in WooCommerce coupon filed. With this plugin you can provide extra amount of time on trial period while purchasing a subscription from your store.
- * Version: 1.4
- * Author: Code Heaven
- * Author URI: https://codeheaven.ca/
+ * Version: 1.5
+ * Author: Betatech
+ * Author URI: https://betatech.co/
  * License: GPLv2
  * License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
  * Text Domain: wcs-trial-coupon
  * Domain Path: /languages
  * Requires at least: 5.7
- * Tested up to: 6.8.1
+ * Tested up to: 6.8.3
  * WC requires at least: 5.0
  * WC tested up to: 8.8
  * Requires PHP: 7.3
@@ -21,6 +21,15 @@
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
+
+// Declare WooCommerce HPOS compatibility BEFORE anything else
+add_action( 'before_woocommerce_init', function() {
+    if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+    }
+} );
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 require_once __DIR__ . '/vendor/autoload.php';
 /*
@@ -33,7 +42,7 @@ final class WCS_Trial_Coupon {
      *
      * $var string
      */
-    const version = '1.4';
+    const version = '1.5';
 
     /*
      * Plugin constructor
@@ -100,6 +109,10 @@ final class WCS_Trial_Coupon {
             } );
             return;
         }
+
+        // Initialize Appsero Tracker
+        $appsero = new WCS\Trial\Coupon\Appsero_Tracker();
+        $appsero->init();
 
         new WCS\Trial\Coupon\Assets();
         new WCS\Trial\Coupon\Trial_Coupon_Actions();

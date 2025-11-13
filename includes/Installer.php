@@ -38,8 +38,7 @@ class Installer {
         load_plugin_textdomain(
             'wcs-trial-coupon',
             false,
-            WCS_TRIAL_COUPON_URL . '/languages/'
+            dirname( plugin_basename( WCS_TRIAL_COUPON_FILE ) ) . '/languages/'
         );
-
     }
 }

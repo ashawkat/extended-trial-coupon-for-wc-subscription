@@ -1,33 +1,37 @@
 === Extended Trial Coupon for WC Subscription ===
-Contributors: codeheaven, adnanshawkat
-Tags: WooCommerce Subscription trial coupon, Trial Coupon, Free Trial Coupon, Woo subscription free trial coupon, Extends Free trial
+Contributors: betatech, adnanshawkat
+Tags: woocommerce subscription, trial coupon, subscription trial, free trial extension, subscription discount
 Requires at least: 5.7
-Tested up to: 6.8.1
-Requires PHP: 7.3
-Stable tag: 1.4
-WC requires at least: 5.0
-WC tested up to: 8.8
+Tested up to: 6.8.3
+Requires PHP: 8.0
+Stable tag: 1.5
+WC requires at least: 8.0
+WC tested up to: 10.3.5
 License: GPLv2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
-**"Trial Coupon for WooCommerce Subscriptions"** will add coupon type & option in WooCommerce coupon settings to extend the default trial period of WooCommerce Subscription products
+Extended Trial Coupon for WC Subscription adds a new coupon type to WooCommerce that allows store owners to extend the default trial period on WooCommerce Subscription products. This is perfect for promotions, campaigns, and providing extended trials without modifying product settings.
 
 == Description ==
-Extended Trial Coupon for WC Subscription is a plugin forked from [*Free Trial Coupon for Woocommerce Subscriptions*](https://wordpress.org/plugins/woo-subscription-trial-coupon/) plugin as the plugin had no updates from the last two year thought it will be good to have such plugin with the updated codebase. **"Trial Coupon for WooCommerce Subscriptions"** will add coupon type & option in WooCommerce coupon settings to extend the default trial period of WooCommerce Subscription products. This plugin will only work if WooCommerce & WooCommerce Subscription is enabled within your website.
+Extended Trial Coupon for WC Subscription is a maintained and improved version of the original “Free Trial Coupon for WooCommerce Subscriptions” plugin, which had not received updates in over two years.
 
-### Required Plugins:
-- [**WooCommerce**](https://wordpress.org/plugins/woocommerce/)
-- [**WooCommerce Subscriptions**](https://woocommerce.com/products/woocommerce-subscriptions/)
+The plugin introduces a new "Subscription Trial" coupon type inside WooCommerce's coupon settings. When applied, the coupon extends the default trial period of WooCommerce Subscription products.
 
-### Features:
-- Add a new coupon type, "Subscription Trial"
-- Work with WooCommerce Subscriptions products
-- Work with coupon type Sign Up Fee Discount
-- Work with coupon type Sign Up Fee % Discount
-- Work with coupon type Recurring Product Discount
-- Work with coupon type Recurring Product % Discount
+This plugin requires both **WooCommerce** and **WooCommerce Subscriptions** to be active.
 
-### Translation available:
+### Key Features
+- Adds a new coupon type: **Subscription Trial**
+- Extends trial length for WooCommerce Subscription products
+- Supports:
+  - Sign Up Fee Discount
+  - Sign Up Fee Percentage Discount
+  - Recurring Product Discount
+  - Recurring Product Percentage Discount
+- Compatible with WooCommerce Subscriptions workflow
+- Fully compatible with **WooCommerce HPOS (High-Performance Order Storage)**
+- Translation-ready with included language files
+
+### Included Translations
 - Swedish
 - Spanish (Spain)
 - German
@@ -35,55 +39,72 @@ Extended Trial Coupon for WC Subscription is a plugin forked from [*Free Trial C
 - French (France)
 
 == Installation ==
-### Through Dashboard
-1. Log in to your WordPress admin panel and go to Plugins -> Add New
-2. Type **Extended Trial Coupon for WC Subscription** in the search box and click the search button.
-3. Find the 'Extended Trial Coupon for WC Subscription' plugin.
-4. Then click on **Install Now** after that, activate the plugin.
-5. Go to WooCommerce Coupon settings & do your magic there.
 
-### Installing Via FTP
-1. Download the plugin to your hard disk.
-2. Unzip.
-3. Upload the 'wcs-trial-coupon' folder into your plugins directory.
-4. Log in to your WordPress admin panel and click the Plugins menu.
-5. Then, activate the plugin.
+### Install via WordPress Dashboard
+1. Navigate to **Plugins → Add New**
+2. Search for **Extended Trial Coupon for WC Subscription**
+3. Click **Install Now**, then **Activate**
+4. Go to **WooCommerce → Coupons** to configure your trial coupon
+
+### Install via FTP
+1. Download the plugin ZIP
+2. Unzip the package
+3. Upload the `wcs-trial-coupon` folder into `/wp-content/plugins/`
+4. Activate the plugin from the **Plugins** menu
 
 == Frequently Asked Questions ==
-= Does it work without WooCommerce plugin? =
-No, it doesn't work without WooCommerce plugin.
-= Does it work without WooCommerce Subscription plugin? =
-No, it doesn't work without Woo Subscription plugin.
-= Does it work with WooCommerce Subscription coupon types? =
-Yes, it will work with the default coupon types.
+
+= Does the plugin work without WooCommerce? =
+No. WooCommerce must be installed and active.
+
+= Does the plugin work without WooCommerce Subscriptions? =
+No. WooCommerce Subscriptions is required for trial extension functionality.
+
+= Is it compatible with existing WooCommerce Subscription coupon types? =
+Yes. It works seamlessly with all default subscription-related coupon types.
 
 == Screenshots ==
-1. Go to WordPress dashboard>woocommerce>coupon
-2. Before applying the coupon code
-3. After applying the coupon code
+1. WooCommerce → Coupons screen
+2. Before applying the trial coupon
+3. After applying the trial coupon
 
 == Changelog ==
+
+= 1.5 =
+* Updated: Tested compatibility with WooCommerce 10.3.5
+* Added: WooCommerce HPOS (High-Performance Order Storage) compatibility
+
+= 1.4 =
+* Updated: Tested compatibility with WooCommerce 8.8
+
 = 1.3 =
-Fixed: Review prompt issue fixed
+* Fixed: Review prompt display issue
 
 = 1.2 =
-Fixed: Minor issues with notice in admin panel fixed.
+* Fixed: Minor admin notice issues
 
 = 1.1 =
-Added: review class for showing a prompt to provide a review if you like us.
+* Added: Review request prompt
 
 = 1.0 =
-Initial release
+* Initial release
 
 == Upgrade Notice ==
+
+= 1.5 =
+Recommended update — includes latest WC compatibility + HPOS support.
+
+= 1.4 =
+Recommended update — tested against WooCommerce 8.8.
+
 = 1.3 =
-Just install/update the plugin & enjoy the features.
+Includes improvements to review prompt handling.
 
 = 1.2 =
-Just install/update the plugin & enjoy the features.
+Minor improvements and notice fixes.
 
 = 1.1 =
-Just install/update the plugin & enjoy the features.
+Adds review request feature.
 
 = 1.0 =
-Just install the plugin & enjoy the features
+First release.
