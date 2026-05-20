@@ -2,15 +2,15 @@
 Contributors: betatech, adnanshawkat
 Tags: woocommerce subscription, trial coupon, subscription trial, free trial extension, subscription discount
 Requires at least: 5.7
-Tested up to: 6.8.3
+Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 1.5
+Stable tag: 1.6
 WC requires at least: 8.0
 WC tested up to: 10.3.5
 License: GPLv2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
-Extended Trial Coupon for WC Subscription adds a new coupon type to WooCommerce that allows store owners to extend the default trial period on WooCommerce Subscription products. This is perfect for promotions, campaigns, and providing extended trials without modifying product settings.
+Easily extend the trial period of WooCommerce Subscription products using a new 'Subscription Trial' coupon type.
 
 == Description ==
 Extended Trial Coupon for WC Subscription is a maintained and improved version of the original “Free Trial Coupon for WooCommerce Subscriptions” plugin, which had not received updates in over two years.
@@ -79,6 +79,11 @@ Yes. It works seamlessly with all default subscription-related coupon types.
 
 == Changelog ==
 
+= 1.6 =
+* Updated: Tested compatibility with WordPress 7.0
+* Updated: Short description to meet WordPress.org directory requirements
+* Fixed: Removed duplicate autoloader require statement
+
 = 1.5 =
 * Updated: Tested compatibility with WooCommerce 10.3.5
 * Added: WooCommerce HPOS (High-Performance Order Storage) compatibility
@@ -99,6 +104,9 @@ Yes. It works seamlessly with all default subscription-related coupon types.
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.6 =
+Recommended update — includes WordPress 7.0 compatibility and directory fixes.
 
 = 1.5 =
 Recommended update — includes latest WC compatibility + HPOS support.

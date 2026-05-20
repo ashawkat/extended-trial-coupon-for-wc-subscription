@@ -80,6 +80,11 @@ Yes. It integrates with all default WooCommerce Subscriptions coupon features.
 
 ## 📜 Changelog
 
+### **1.6**
+- Updated: Tested compatibility with WordPress **7.0**
+- Updated: Short description to meet WordPress.org directory requirements
+- Fixed: Removed duplicate autoloader require statement
+
 ### **1.5**
 - Updated: Compatibility with WooCommerce **10.3.5**
 - Added: **WooCommerce HPOS (High-Performance Order Storage) support**

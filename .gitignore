@@ -1,0 +1,70 @@
+# Composer lock file (optional - keep if you want consistent versions)
+# Uncomment the line below if you don't want composer.lock in your repo
+# composer.lock
+
+# IDE and Editor files
+.idea
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# PHP Storm
+.phpstorm.meta.php
+_ide_helper.php
+
+# Build and deployment
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+*.bak
+*.swp
+*.swo
+*~
+
+# WordPress specific
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/cache/
+wp-content/backups/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Brewfile (if it's local development specific)
+Brewfile
+Brewfile.lock.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+/dist/
+/build/
+*.zip
+*.tar.gz
+
+# Testing
+/tests/
+/phpunit.xml
+/.phpunit.result.cache

@@ -3,7 +3,7 @@
  * Plugin Name: Extended Trial Coupon for WC Subscription
  * Plugin URI: https://wordpress.org/plugins/extended-trial-coupon-for-wc-subscription/
  * Description: WCS Trial Coupon will add option in WooCommerce coupon filed. With this plugin you can provide extra amount of time on trial period while purchasing a subscription from your store.
- * Version: 1.5
+ * Version: 1.6
  * Author: Betatech
  * Author URI: https://betatech.co/
  * License: GPLv2
@@ -11,10 +11,10 @@
  * Text Domain: wcs-trial-coupon
  * Domain Path: /languages
  * Requires at least: 5.7
- * Tested up to: 6.8.3
- * WC requires at least: 5.0
- * WC tested up to: 8.8
- * Requires PHP: 7.3
+ * Tested up to: 7.0
+ * WC requires at least: 8.0
+ * WC tested up to: 10.3.5
+ * Requires PHP: 8.0
  * Tags: Woocommerce Subscription trial coupon, Trial Coupon, Free Trial Coupon, Woo subscription free trial coupon, Extends Free trial
  */
 
@@ -30,8 +30,6 @@ add_action( 'before_woocommerce_init', function() {
 } );
 
 require_once __DIR__ . '/vendor/autoload.php';
-
-require_once __DIR__ . '/vendor/autoload.php';
 /*
  * Main plugin class
  */
@@ -42,7 +40,7 @@ final class WCS_Trial_Coupon {
      *
      * $var string
      */
-    const version = '1.5';
+    const version = '1.6';
 
     /*
      * Plugin constructor
