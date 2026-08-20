@@ -2,11 +2,11 @@
 Contributors: betatech, adnanshawkat
 Tags: woocommerce subscription, trial coupon, subscription trial, free trial extension, subscription discount
 Requires at least: 5.7
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.6
+Stable tag: 1.7
 WC requires at least: 8.0
-WC tested up to: 10.3.5
+WC tested up to: 11.0.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
@@ -28,6 +28,7 @@ This plugin requires both **WooCommerce** and **WooCommerce Subscriptions** to b
   - Recurring Product Discount
   - Recurring Product Percentage Discount
 - Compatible with WooCommerce Subscriptions workflow
+- Compatible with Cart & Checkout blocks
 - Fully compatible with **WooCommerce HPOS (High-Performance Order Storage)**
 - Translation-ready with included language files
 
@@ -49,7 +50,7 @@ This plugin requires both **WooCommerce** and **WooCommerce Subscriptions** to b
 ### Install via FTP
 1. Download the plugin ZIP
 2. Unzip the package
-3. Upload the `wcs-trial-coupon` folder into `/wp-content/plugins/`
+3. Upload the `extended-trial-coupon-for-wc-subscription` folder into `/wp-content/plugins/`
 4. Activate the plugin from the **Plugins** menu
 
 ### Privacy Policy
@@ -72,12 +73,28 @@ No. WooCommerce Subscriptions is required for trial extension functionality.
 = Is it compatible with existing WooCommerce Subscription coupon types? =
 Yes. It works seamlessly with all default subscription-related coupon types.
 
+= Is it compatible with WooCommerce HPOS? =
+Yes. The plugin declares High-Performance Order Storage compatibility and does not read or write order data through legacy post meta.
+
+= Is it compatible with Cart and Checkout blocks? =
+Yes. Trial overrides use WooCommerce Subscriptions product filters, so they apply in both classic and block checkout.
+
 == Screenshots ==
 1. WooCommerce → Coupons screen
 2. Before applying the trial coupon
 3. After applying the trial coupon
 
 == Changelog ==
+
+= 1.7 =
+* Updated: Tested with WordPress 7.1, WooCommerce 11.0.1, and PHP 8.5
+* Security: Review notice actions now require a nonce and capability check
+* Security: Coupon trial fields are sanitized and capability-checked on save
+* Fixed: "Already Rated" review action did not dismiss the notice
+* Fixed: Trial coupons could be rejected as an unknown WooCommerce coupon type
+* Fixed: Only the first applied coupon was checked for trial data
+* Changed: Trial length is applied via subscription filters instead of mutating product meta (HPOS-safe)
+* Added: Cart & Checkout blocks compatibility declaration
 
 = 1.6 =
 * Updated: Tested compatibility with WordPress 7.0
@@ -104,6 +121,9 @@ Yes. It works seamlessly with all default subscription-related coupon types.
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.7 =
+Recommended update — WordPress 7.1 / WooCommerce 11.0.1 compatibility, HPOS-safe trial application, and security fixes.
 
 = 1.6 =
 Recommended update — includes WordPress 7.0 compatibility and directory fixes.

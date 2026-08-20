@@ -1,9 +1,9 @@
 <?php
-/*
+/**
  * Plugin Name: Extended Trial Coupon for WC Subscription
  * Plugin URI: https://wordpress.org/plugins/extended-trial-coupon-for-wc-subscription/
  * Description: WCS Trial Coupon will add option in WooCommerce coupon filed. With this plugin you can provide extra amount of time on trial period while purchasing a subscription from your store.
- * Version: 1.6
+ * Version: 1.7
  * Author: Betatech
  * Author URI: https://betatech.co/
  * License: GPLv2
@@ -11,38 +11,49 @@
  * Text Domain: wcs-trial-coupon
  * Domain Path: /languages
  * Requires at least: 5.7
- * Tested up to: 7.0
- * WC requires at least: 8.0
- * WC tested up to: 10.3.5
+ * Tested up to: 7.1
  * Requires PHP: 8.0
+ * Requires Plugins: woocommerce
+ * WC requires at least: 8.0
+ * WC tested up to: 11.0.1
  * Tags: Woocommerce Subscription trial coupon, Trial Coupon, Free Trial Coupon, Woo subscription free trial coupon, Extends Free trial
  */
 
-if ( !defined( 'ABSPATH' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Declare WooCommerce HPOS compatibility BEFORE anything else
-add_action( 'before_woocommerce_init', function() {
-    if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+/**
+ * Declare WooCommerce feature compatibility before WooCommerce initializes.
+ * Coupons remain a CPT; this plugin does not query orders via post meta.
+ */
+add_action(
+    'before_woocommerce_init',
+    function () {
+        if ( ! class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+            return;
+        }
+
         \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'cart_checkout_blocks', __FILE__, true );
     }
-} );
+);
 
 require_once __DIR__ . '/vendor/autoload.php';
-/*
+
+/**
  * Main plugin class
  */
 final class WCS_Trial_Coupon {
 
-    /*
+    /**
      * Plugin version
      *
-     * $var string
+     * @var string
      */
-    const version = '1.6';
+    const version = '1.7';
 
-    /*
+    /**
      * Plugin constructor
      */
     private function __construct() {
@@ -87,28 +98,38 @@ final class WCS_Trial_Coupon {
      * @return void
      */
     public function init_plugin() {
+        load_plugin_textdomain(
+            'wcs-trial-coupon',
+            false,
+            dirname( plugin_basename( WCS_TRIAL_COUPON_FILE ) ) . '/languages/'
+        );
 
         // Check if WooCommerce is active.
         if ( ! class_exists( 'WooCommerce' ) ) {
-            add_action( 'admin_notices', function() {
-                echo '<div class="notice notice-error is-dismissible"><p>';
-                esc_html_e( 'Extended Trial Coupon for WC Subscription requires WooCommerce to be activated.', 'wcs-trial-coupon' );
-                echo '</p></div>';
-            } );
+            add_action(
+                'admin_notices',
+                function () {
+                    echo '<div class="notice notice-error is-dismissible"><p>';
+                    esc_html_e( 'Extended Trial Coupon for WC Subscription requires WooCommerce to be activated.', 'wcs-trial-coupon' );
+                    echo '</p></div>';
+                }
+            );
             return;
         }
 
         // Check if WooCommerce Subscriptions is active.
         if ( ! class_exists( 'WC_Subscriptions' ) ) {
-            add_action( 'admin_notices', function() {
-                echo '<div class="notice notice-error is-dismissible"><p>';
-                esc_html_e( 'Extended Trial Coupon for WC Subscription requires WooCommerce Subscriptions to be activated.', 'wcs-trial-coupon' );
-                echo '</p></div>';
-            } );
+            add_action(
+                'admin_notices',
+                function () {
+                    echo '<div class="notice notice-error is-dismissible"><p>';
+                    esc_html_e( 'Extended Trial Coupon for WC Subscription requires WooCommerce Subscriptions to be activated.', 'wcs-trial-coupon' );
+                    echo '</p></div>';
+                }
+            );
             return;
         }
 
-        // Initialize Appsero Tracker
         $appsero = new WCS\Trial\Coupon\Appsero_Tracker();
         $appsero->init();
 
@@ -130,7 +151,6 @@ final class WCS_Trial_Coupon {
                 esc_html__( 'Plugin Activation Error', 'wcs-trial-coupon' ),
                 [ 'back_link' => true ]
             );
-            return; // Should not be strictly necessary after wp_die, but good practice.
         }
 
         // Check if WooCommerce Subscriptions is active.
@@ -140,7 +160,6 @@ final class WCS_Trial_Coupon {
                 esc_html__( 'Plugin Activation Error', 'wcs-trial-coupon' ),
                 [ 'back_link' => true ]
             );
-            return; // Should not be strictly necessary after wp_die, but good practice.
         }
 
         $installer = new WCS\Trial\Coupon\Installer();

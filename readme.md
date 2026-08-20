@@ -14,6 +14,7 @@ Extend and customize the trial period of WooCommerce Subscription products using
   - Recurring Product Discount
   - Recurring Product % Discount
 - Fully compatible with **WooCommerce HPOS (High-Performance Order Storage)**
+- Compatible with Cart & Checkout blocks
 - Translation files included:
   - Swedish  
   - Spanish (Spain)
@@ -26,9 +27,9 @@ Extend and customize the trial period of WooCommerce Subscription products using
 
 ## 🛠 Requirements
 
-- **WordPress** 5.7+  
-- **PHP** 8.0+  
-- **WooCommerce** 8.0+  
+- **WordPress** 5.7+ (tested up to 7.1)  
+- **PHP** 8.0+ (tested up to 8.5)  
+- **WooCommerce** 8.0+ (tested up to 11.0.1)  
 - **WooCommerce Subscriptions** plugin  
 
 ---
@@ -44,7 +45,7 @@ Extend and customize the trial period of WooCommerce Subscription products using
 ### **Install via FTP**
 1. Download the plugin ZIP  
 2. Extract files  
-3. Upload the `wcs-trial-coupon` folder to `/wp-content/plugins/`  
+3. Upload the `extended-trial-coupon-for-wc-subscription` folder to `/wp-content/plugins/`  
 4. Activate the plugin  
 
 ---
@@ -68,6 +69,9 @@ No. Subscription extension requires WooCommerce Subscriptions.
 ### Does it support other subscription coupon types?
 Yes. It integrates with all default WooCommerce Subscriptions coupon features.
 
+### Is it HPOS compatible?
+Yes. Compatibility is declared with WooCommerce, and trial overrides do not write order or product meta through legacy post APIs.
+
 ---
 
 ## 🖼 Screenshots
@@ -79,6 +83,16 @@ Yes. It integrates with all default WooCommerce Subscriptions coupon features.
 ---
 
 ## 📜 Changelog
+
+### **1.7**
+- Updated: Tested with WordPress **7.1**, WooCommerce **11.0.1**, and PHP **8.5**
+- Security: Review notice actions now require a nonce and capability check
+- Security: Coupon trial fields are sanitized and capability-checked on save
+- Fixed: "Already Rated" review action did not dismiss the notice
+- Fixed: Trial coupons could be rejected as an unknown WooCommerce coupon type
+- Fixed: Only the first applied coupon was checked for trial data
+- Changed: Trial length is applied via subscription filters instead of mutating product meta (HPOS-safe)
+- Added: Cart & Checkout blocks compatibility declaration
 
 ### **1.6**
 - Updated: Tested compatibility with WordPress **7.0**

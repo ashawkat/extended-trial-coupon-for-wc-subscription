@@ -1,4 +1,4 @@
-;jQuery( document ).ready( function( $ ) {
+jQuery( document ).ready( function( $ ) {
     'use strict';
 
     var renewals_field = document.querySelector( '.subscription_coupon_trial_length_field' ),
@@ -14,9 +14,8 @@
          * Initialize variation actions.
          */
         init: function() {
-
             if ( renewals_field ) {
-                $( document.getElementById( 'discount_type' ) ).on( 'change', this.type_options ).change();
+                $( document.getElementById( 'discount_type' ) ).on( 'change', this.type_options ).trigger( 'change' );
                 this.move_field();
             }
         },
@@ -46,9 +45,17 @@
          */
         move_field: function() {
             var parent = document.getElementById( 'general_coupon_data' ),
-                shipping = parent.querySelector( '.free_shipping_field' );
+                shipping;
 
-            parent.insertBefore( renewals_field, shipping );
+            if ( ! parent || ! renewals_field ) {
+                return;
+            }
+
+            shipping = parent.querySelector( '.free_shipping_field' );
+
+            if ( shipping ) {
+                parent.insertBefore( renewals_field, shipping );
+            }
         }
     };
 
