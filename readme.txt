@@ -4,7 +4,7 @@ Tags: woocommerce subscription, trial coupon, subscription trial, free trial ext
 Requires at least: 5.7
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.7
+Stable tag: 1.7.1
 WC requires at least: 8.0
 WC tested up to: 11.0.1
 License: GPLv2
@@ -80,11 +80,16 @@ Yes. The plugin declares High-Performance Order Storage compatibility and does n
 Yes. Trial overrides use WooCommerce Subscriptions product filters, so they apply in both classic and block checkout.
 
 == Screenshots ==
-1. WooCommerce → Coupons screen
-2. Before applying the trial coupon
-3. After applying the trial coupon
+1. Creating a coupon with the **Subscription Trial** discount type — set the extended trial length and period in WooCommerce → Coupons.
+2. Cart **before** the coupon: the subscription product shows its original 10-day free trial.
+3. Cart **after** applying the coupon: the free trial is extended to 2 weeks.
 
 == Changelog ==
+
+= 1.7.1 =
+* Changed: Text domain now matches the WordPress.org plugin slug
+* Fixed: Bundled translation files renamed and recompiled so translations load correctly
+* Changed: Composer metadata cleanup (SPDX license identifier, package name) and release automation — no functional changes
 
 = 1.7 =
 * Updated: Tested with WordPress 7.1, WooCommerce 11.0.1, and PHP 8.5
@@ -121,6 +126,9 @@ Yes. Trial overrides use WooCommerce Subscriptions product filters, so they appl
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.7.1 =
+Maintenance release — corrects the text domain and bundled translation files. No functional changes.
 
 = 1.7 =
 Recommended update — WordPress 7.1 / WooCommerce 11.0.1 compatibility, HPOS-safe trial application, and security fixes.

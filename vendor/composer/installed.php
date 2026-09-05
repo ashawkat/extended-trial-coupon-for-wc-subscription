@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'betatech/wcs-trial-coupon',
+        'name' => 'betatech/extended-trial-coupon-for-wc-subscription',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '58205c7e7a64301cd2d8f477e1eb5373ea7c5bf1',
+        'reference' => 'c07b90fa6e4409bc8108b371245b1c753af1728b',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,18 +11,18 @@
     ),
     'versions' => array(
         'appsero/client' => array(
-            'pretty_version' => 'v2.0.4',
-            'version' => '2.0.4.0',
-            'reference' => '12ff65b9770286d21edf314e7acfcd26fdde3315',
+            'pretty_version' => 'v2.0.6',
+            'version' => '2.0.6.0',
+            'reference' => '2e553be6a47b387a7b05496f6a6e8d8595dd0d08',
             'type' => 'library',
             'install_path' => __DIR__ . '/../appsero/client',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'betatech/wcs-trial-coupon' => array(
+        'betatech/extended-trial-coupon-for-wc-subscription' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '58205c7e7a64301cd2d8f477e1eb5373ea7c5bf1',
+            'reference' => 'c07b90fa6e4409bc8108b371245b1c753af1728b',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -38,9 +38,9 @@
             'dev_requirement' => true,
         ),
         'php-stubs/wordpress-stubs' => array(
-            'pretty_version' => 'v6.8.3',
-            'version' => '6.8.3.0',
-            'reference' => 'abeb5a8b58fda7ac21f15ee596f302f2959a7114',
+            'pretty_version' => 'v6.9.4',
+            'version' => '6.9.4.0',
+            'reference' => '90a9412826b9944f93b10bf41d795b5fe68abcd5',
             'type' => 'library',
             'install_path' => __DIR__ . '/../php-stubs/wordpress-stubs',
             'aliases' => array(),
