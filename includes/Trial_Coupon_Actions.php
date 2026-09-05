@@ -50,7 +50,7 @@ class Trial_Coupon_Actions {
      * @return array
      */
     public function create_discount_type( $discount_types ) {
-        $discount_types[ self::DISCOUNT_TYPE ] = __( 'Subscription Trial', 'wcs-trial-coupon' );
+        $discount_types[ self::DISCOUNT_TYPE ] = __( 'Subscription Trial', 'extended-trial-coupon-for-wc-subscription' );
 
         return $discount_types;
     }
@@ -108,8 +108,8 @@ class Trial_Coupon_Actions {
         }
 
         $coupon = new \WC_Coupon( $coupon_id );
-        $coupon->update_meta_data( $this->coupon_trial_length, $this->sanitize_trial_length( wp_unslash( $_POST['_wcs_trial_coupon_length'] ) ) );
-        $coupon->update_meta_data( $this->coupon_trial_period, $this->sanitize_trial_period( wp_unslash( $_POST['_wcs_trial_coupon_period'] ) ) );
+        $coupon->update_meta_data( $this->coupon_trial_length, $this->sanitize_trial_length( absint( wp_unslash( $_POST['_wcs_trial_coupon_length'] ) ) ) );
+        $coupon->update_meta_data( $this->coupon_trial_period, $this->sanitize_trial_period( sanitize_key( wp_unslash( $_POST['_wcs_trial_coupon_period'] ) ) ) );
         $coupon->save();
     }
 
@@ -142,7 +142,7 @@ class Trial_Coupon_Actions {
         }
 
         if ( ! $this->coupon_has_trial( $coupon ) ) {
-            throw new \Exception( __( 'This trial coupon is missing a trial length or period.', 'wcs-trial-coupon' ) );
+            throw new \Exception( esc_html__( 'This trial coupon is missing a trial length or period.', 'extended-trial-coupon-for-wc-subscription' ) );
         }
 
         if ( ! function_exists( 'WC' ) || ! WC()->cart ) {
@@ -150,7 +150,7 @@ class Trial_Coupon_Actions {
         }
 
         if ( ! $this->cart_contains_subscription() ) {
-            throw new \Exception( __( 'Sorry, this coupon is only valid for subscription products.', 'wcs-trial-coupon' ) );
+            throw new \Exception( esc_html__( 'Sorry, this coupon is only valid for subscription products.', 'extended-trial-coupon-for-wc-subscription' ) );
         }
 
         return $valid;

@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: wcs-trial-coupon.php\n"
+"X-Poedit-WPHeader: extended-trial-coupon-for-wc-subscription.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
 "__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
@@ -67,29 +67,29 @@ msgid ""
 "subscription"
 msgstr ""
 
-#: wcs-trial-coupon.php:88
+#: extended-trial-coupon-for-wc-subscription.php:88
 msgid ""
 "Extended Trial Coupon for WC Subscription requires WooCommerce to be "
 "activated."
 msgstr ""
 
-#: wcs-trial-coupon.php:98
+#: extended-trial-coupon-for-wc-subscription.php:98
 msgid ""
 "Extended Trial Coupon for WC Subscription requires WooCommerce Subscriptions "
 "to be activated."
 msgstr ""
 
-#: wcs-trial-coupon.php:118
+#: extended-trial-coupon-for-wc-subscription.php:118
 msgid ""
 "Extended Trial Coupon for WC Subscription requires WooCommerce to be "
 "activated before you can activate this plugin."
 msgstr ""
 
-#: wcs-trial-coupon.php:119 wcs-trial-coupon.php:129
+#: extended-trial-coupon-for-wc-subscription.php:119 extended-trial-coupon-for-wc-subscription.php:129
 msgid "Plugin Activation Error"
 msgstr ""
 
-#: wcs-trial-coupon.php:128
+#: extended-trial-coupon-for-wc-subscription.php:128
 msgid ""
 "Extended Trial Coupon for WC Subscription requires WooCommerce Subscriptions "
 "to be activated before you can activate this plugin."

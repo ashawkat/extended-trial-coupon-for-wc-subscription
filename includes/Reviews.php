@@ -117,13 +117,13 @@ class Reviews {
 
         echo '<div class="notice wcs-review-notice wcs-review-notice--extended">';
         echo '<div class="wcs-review-notice__content">';
-        echo '<h3>' . esc_html__( 'Enjoying Extended Trial Coupon for WC Subscription?', 'wcs-trial-coupon' ) . '</h3>';
-        echo '<p>' . esc_html__( 'Thank you for choosing Extended Trial Coupon for WC Subscription. If you have found our plugin useful and makes you smile, please consider giving us a 5-star rating on WordPress.org. It would mean the world to us.', 'wcs-trial-coupon' ) . '</p>';
+        echo '<h3>' . esc_html__( 'Enjoying Extended Trial Coupon for WC Subscription?', 'extended-trial-coupon-for-wc-subscription' ) . '</h3>';
+        echo '<p>' . esc_html__( 'Thank you for choosing Extended Trial Coupon for WC Subscription. If you have found our plugin useful and makes you smile, please consider giving us a 5-star rating on WordPress.org. It would mean the world to us.', 'extended-trial-coupon-for-wc-subscription' ) . '</p>';
         echo '<div class="wcs-review-notice__actions">';
-        echo '<a href="' . esc_url( $reviewurl ) . '" class="wcs-review-button wcs-review-button--cta" target="_blank" rel="noopener noreferrer"><span>' . esc_html__( '👍 Yes, You Deserve It!', 'wcs-trial-coupon' ) . '</span></a>';
-        echo '<a href="' . esc_url( $rated ) . '" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>' . esc_html__( '🙌 Already Rated!', 'wcs-trial-coupon' ) . '</span></a>';
-        echo '<a href="' . esc_url( $remind_me ) . '" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>' . esc_html__( '🔔 Remind Me Later', 'wcs-trial-coupon' ) . '</span></a>';
-        echo '<a href="' . esc_url( $dont_disturb ) . '" class="wcs-review-button wcs-review-button--cta wcs-review-button--error wcs-review-button--outline"><span>' . esc_html__( '💔 No Thanks', 'wcs-trial-coupon' ) . '</span></a>';
+        echo '<a href="' . esc_url( $reviewurl ) . '" class="wcs-review-button wcs-review-button--cta" target="_blank" rel="noopener noreferrer"><span>' . esc_html__( '👍 Yes, You Deserve It!', 'extended-trial-coupon-for-wc-subscription' ) . '</span></a>';
+        echo '<a href="' . esc_url( $rated ) . '" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>' . esc_html__( '🙌 Already Rated!', 'extended-trial-coupon-for-wc-subscription' ) . '</span></a>';
+        echo '<a href="' . esc_url( $remind_me ) . '" class="wcs-review-button wcs-review-button--cta wcs-review-button--outline"><span>' . esc_html__( '🔔 Remind Me Later', 'extended-trial-coupon-for-wc-subscription' ) . '</span></a>';
+        echo '<a href="' . esc_url( $dont_disturb ) . '" class="wcs-review-button wcs-review-button--cta wcs-review-button--error wcs-review-button--outline"><span>' . esc_html__( '💔 No Thanks', 'extended-trial-coupon-for-wc-subscription' ) . '</span></a>';
         echo '</div></div></div>';
     }
 
