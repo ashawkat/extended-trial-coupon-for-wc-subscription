@@ -7,14 +7,17 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run (build & validate, skip the final SVN commit)'
+        description: 'Dry run (build everything, skip the final SVN commit)'
         type: boolean
         required: false
         default: true
 
+env:
+  SLUG: extended-trial-coupon-for-wc-subscription
+
 jobs:
-  deploy:
-    name: Deploy new version to WordPress.org
+  build:
+    name: Build deployable plugin
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -37,29 +40,57 @@ jobs:
       - name: Lint PHP files
         run: find . -name '*.php' -print0 | xargs -0 -n1 php -l > /dev/null
 
-      - name: Verify SVN credentials are configured
-        if: ${{ github.event_name == 'push' }}
-        env:
-          HAS_CREDS: ${{ secrets.SVN_USERNAME != '' }}
+      - name: Assemble deployable build
         run: |
-          if [ "$HAS_CREDS" != "true" ]; then
-            echo "::error::SVN_USERNAME / SVN_PASSWORD secrets are not configured. Add your WordPress.org SVN credentials under Settings → Secrets and variables → Actions."
+          mkdir -p built
+          rsync -a --exclude-from=.distignore ./ built/
+          if [ -e "built/composer.json" ] || [ -e "built/.github" ]; then
+            echo "::error::Repository/dev files leaked into the build — check .distignore"
             exit 1
           fi
 
+      - name: Generate plugin ZIP
+        run: cd built && zip -rq "../${SLUG}.zip" .
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.SLUG }}-${{ github.ref_name }}
+          path: |
+            built
+            ${{ env.SLUG }}.zip
+          if-no-files-found: error
+
+  deploy:
+    name: Deploy to WordPress.org
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download built plugin
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.SLUG }}-${{ github.ref_name }}
+          path: .
+
+      - name: Check SVN credentials are configured
+        id: creds
+        env:
+          HAS_CREDS: ${{ secrets.SVN_USERNAME != '' }}
+        run: echo "has_creds=$HAS_CREDS" >> "$GITHUB_OUTPUT"
+
       - name: WordPress Plugin Deploy
-        id: deploy
-        uses: 10up/action-wordpress-plugin-deploy@stable
+        if: steps.creds.outputs.has_creds == 'true'
+        uses: 10up/action-wordpress-plugin-deploy@2.3.0
         with:
           dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
-          generate-zip: true
         env:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          BUILD_DIR: built
 
-      - name: Upload deployment ZIP artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: wordpress-org-zip-${{ github.run_number }}
-          path: ${{ steps.deploy.outputs.zip-path }}
-          if-no-files-found: warn
+      - name: Skipped — SVN credentials not configured
+        if: steps.creds.outputs.has_creds != 'true'
+        run: echo "::notice::Build succeeded. SVN_USERNAME / SVN_PASSWORD secrets are not set yet — add your WordPress.org SVN credentials under Settings → Secrets and variables → Actions to enable deployment."
