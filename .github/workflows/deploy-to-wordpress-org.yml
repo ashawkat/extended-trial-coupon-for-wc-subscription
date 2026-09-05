@@ -42,23 +42,23 @@ jobs:
 
       - name: Assemble deployable build
         run: |
-          mkdir -p built
-          rsync -a --exclude-from=.distignore ./ built/
-          if [ -e "built/composer.json" ] || [ -e "built/.github" ]; then
+          mkdir -p "$RUNNER_TEMP/built"
+          rsync -a --exclude-from=.distignore ./ "$RUNNER_TEMP/built/"
+          if [ -e "$RUNNER_TEMP/built/composer.json" ] || [ -e "$RUNNER_TEMP/built/.github" ]; then
             echo "::error::Repository/dev files leaked into the build — check .distignore"
             exit 1
           fi
 
       - name: Generate plugin ZIP
-        run: cd built && zip -rq "../${SLUG}.zip" .
+        run: cd "$RUNNER_TEMP/built" && zip -rq "$RUNNER_TEMP/${SLUG}.zip" .
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.SLUG }}-${{ github.ref_name }}
           path: |
-            built
-            ${{ env.SLUG }}.zip
+            ${{ runner.temp }}/built
+            ${{ runner.temp }}/${{ env.SLUG }}.zip
           if-no-files-found: error
 
   deploy:
