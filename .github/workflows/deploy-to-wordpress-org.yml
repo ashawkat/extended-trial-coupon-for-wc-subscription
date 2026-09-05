@@ -1,0 +1,65 @@
+name: Deploy to WordPress.org
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (build & validate, skip the final SVN commit)'
+        type: boolean
+        required: false
+        default: true
+
+jobs:
+  deploy:
+    name: Deploy new version to WordPress.org
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Install production Composer dependencies
+        run: |
+          composer install --no-dev --optimize-autoloader --no-interaction --no-progress
+          if [ -n "$(find vendor/php-stubs -type f 2>/dev/null)" ]; then
+            echo "::error::Development PHP stubs found in vendor/ — the build must not ship them."
+            exit 1
+          fi
+
+      - name: Lint PHP files
+        run: find . -name '*.php' -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Verify SVN credentials are configured
+        if: ${{ github.event_name == 'push' }}
+        env:
+          HAS_CREDS: ${{ secrets.SVN_USERNAME != '' }}
+        run: |
+          if [ "$HAS_CREDS" != "true" ]; then
+            echo "::error::SVN_USERNAME / SVN_PASSWORD secrets are not configured. Add your WordPress.org SVN credentials under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: WordPress Plugin Deploy
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        with:
+          dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          generate-zip: true
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+
+      - name: Upload deployment ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wordpress-org-zip-${{ github.run_number }}
+          path: ${{ steps.deploy.outputs.zip-path }}
+          if-no-files-found: warn

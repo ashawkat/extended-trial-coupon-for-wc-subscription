@@ -1,0 +1,31 @@
+# Files excluded from the WordPress.org deployment.
+# Used by 10up/action-wordpress-plugin-deploy (takes precedence over .gitattributes).
+
+# Version control & CI
+.git
+.github
+.distignore
+.gitattributes
+.gitignore
+
+# IDE / OS files
+.idea
+.DS_Store
+
+# WordPress.org repository assets (banners, icons, screenshots)
+.wordpress-org
+
+# Local development files
+/Brewfile
+node_modules
+
+# Markdown readme (GitHub only; WordPress.org uses readme.txt)
+/readme.md
+
+# Composer metadata (runtime vendor/ is shipped)
+/composer.json
+/composer.lock
+
+# Translation sources (compiled .mo files ship; .po/.pot live on translate.wordpress.org & GitHub)
+*.po
+*.pot

@@ -68,3 +68,5 @@ Brewfile.lock.json
 /tests/
 /phpunit.xml
 /.phpunit.result.cache
+# Composer dev-only packages (installed locally, never committed)
+vendor/php-stubs/
