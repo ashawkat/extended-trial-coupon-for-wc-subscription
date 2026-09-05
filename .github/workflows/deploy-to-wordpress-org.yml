@@ -81,6 +81,10 @@ jobs:
           HAS_CREDS: ${{ secrets.SVN_USERNAME != '' }}
         run: echo "has_creds=$HAS_CREDS" >> "$GITHUB_OUTPUT"
 
+      - name: Resolve version for manual runs
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "VERSION=$(awk '/^Stable tag:/{print $3}' readme.txt)" >> "$GITHUB_ENV"
+
       - name: WordPress Plugin Deploy
         if: steps.creds.outputs.has_creds == 'true'
         uses: 10up/action-wordpress-plugin-deploy@2.3.0
@@ -90,6 +94,7 @@ jobs:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           BUILD_DIR: built
+          VERSION: ${{ env.VERSION || github.ref_name }}
 
       - name: Skipped — SVN credentials not configured
         if: steps.creds.outputs.has_creds != 'true'
